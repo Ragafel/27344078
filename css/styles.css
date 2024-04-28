@@ -94,10 +94,31 @@ nav{
     margin-right: 5px;
     width: 20%;
 }
+
+.dummys li:hover{
+    animation-name:  zoo;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+
+
+@keyframes zoo {
+    from{
+        transform: scale(1), rotate(0deg);
+    }
+    to{
+        transform: scale(1.15) rotate(10deg);
+        background-color:  #99c5dd;
+    }
+}
+    
+
+
 section{
     clear: both;
 }
 img{
+    margin-left: 5px;
     width: 189px;
     height: 189px;
     
