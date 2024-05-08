@@ -1,7 +1,11 @@
+.perfil{
+    display: flex;
+}
 .midescripcion {
-    width: 1024px; 
-    height: 512px; 
-    float: left; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
     border-color: black; 
     border: solid;
     box-shadow: 5px 5px gray;
@@ -9,38 +13,51 @@
 .mifoto {
     width: 288px; 
     height: 512px; 
-    float: left; 
+    float: left;
     padding: auto;
     border-top-left-radius: 50px;
 }
 
 .nombre{
     color: purple; 
-    font-size: 75px; 
+    font-size: 5em; 
     margin: 0;
+    width: 100%;
 }
 
 .descripcion{ 
     font-family: fantasy;
+    font-size: 1em;
+}
+table{
+    width: 65%;
+}
+tr{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 1em;
 }
 
-.td1{
-    text-align: left; 
-    width: 400px;
-}
 
-.td2{
-    text-align: left;
-}
 a{
     color: orange;
 }
 a:visited{
     color:red;
 }
+
+/*--------------------------------------------------------------------------------------------------*/
 .index{
+    display: flex;
+    flex-direction: column;
     width: 1000px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 nav{
     position: relative;
     top: 0;
@@ -50,20 +67,23 @@ nav{
     vertical-align: middle;
 }
 .ulheader{
+    text-align: center;
+    display: flex;
     list-style: none;
     width: 100%;
 }
 .ulheader li{
-    float: left;
-    text-align: center;
+    flex-direction: column;
     width: 33%;
     background-color: rgb(41, 200, 199);;
     border-right: solid 2px white;
-    height: 50px;
     text-align: center;
 
 }
 footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(41, 200, 199);
     position: relative;
     bottom: 0;
@@ -82,52 +102,110 @@ nav{
     width: 100%;
 }
 .dummys{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "Rafael Francisca Andrea Yuritza"
+    "Luis Andres Wilmer Aliarly"
+    "Yeira Karissa Maikel Lyan";
     list-style: none;
-    overflow-y: hidden;
-    width: 100%;
+    gap: .9em;
+   
+}
+.Rafael{
+    grid-area: Rafael;
+}
+.Francisca{
+    grid-area: Francisca;
+}
+.Andrea{
+    grid-area: Andrea;
+}
+.Yuritza{
+    grid-area: Yuritza;
+}
+.Luis{
+    grid-area: Luis;
+}
+.Andres{
+    grid-area: Andres;
+}
+.Wilmer{
+    grid-area: Wilmer;
+}
+.Aliarly{
+    grid-area: Aliarly;
+}
+.Yeira{
+    grid-area: Yeira;
+}
+.Karissa{
+    grid-area: Karissa;
+}
+.Maikel{
+    grid-area: Maikel;
+}
+.Lyan{
+    grid-area: Lyan;
 }
 .dummys li{
-    float: left;
+    display: flex;
+    flex-direction: column;
     overflow-y: hidden;
     background-color: azure;
-    border: solid 1px gainsboro;
-    margin-right: 5px;
-    width: 20%;
+    border: solid 1px rgb(220, 220, 220);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    position: relative;
 }
 
 .dummys li:hover{
-    animation-name:  zoo;
+  /*  animation-name:  zoo;
     animation-fill-mode: forwards;
-    animation-duration: 2s;
+    animation-duration: 2s;*/
+    transform: scale(1.15) rotate(10deg);
+    background-color:  #99c5dd;
+    transition: transform 1.5s;
 }
 
-
+/*
 @keyframes zoo {
     from{
         transform: scale(1), rotate(0deg);
     }
     to{
         transform: scale(1.15) rotate(10deg);
-        background-color:  #99c5dd;
+        
+    }
+}*/
+    
+
+
+img{
+    width: 180px;
+    height: 190px;
+  
+}
+@media (min-width: 320px) and (max-width: 480px) {
+    .mifoto {
+        background: url(../CEDULAPequeña.jpg);
     }
 }
-    
-
-
-section{
-    clear: both;
+@media (min-width: 481px) and (max-width: 768px) {
+    .mifoto{
+        background: url(../CEDULAPequeña.jpg);
+    }
 }
-img{
-    margin-left: 5px;
-    width: 189px;
-    height: 189px;
-    
+@media (min-width: 769px) and (max-width: 1024px) {
+    .mifoto{
+        background: url(../CEDULAGrande.jpg);
+    }
 }
-.listado{
-    align-items: center;
-}
-section{
-    width: 100%;
-    position: relative;
-    left: 10%;
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .mifoto{
+        background: url(../CEDULAGrande.jpg);
+    }
 }
