@@ -1,0 +1,13 @@
+{	
+	"nombre":"Rafael Machado",
+	"descripcion":"Soy estudiante de Computaci&oacute;n en la UCV. Actualmente cursando el 6to semestre de la carrera con las materias de IHC: Interaccion Humano-Computador y ATI: Aplicaciones con Tecnologia Internet. Tengo 25 años y mientras curso mis estudios, trabajo editando videos y manejando cuentas de Instagram y Twitter. Ademas de la computaci&oacute;n, me gustan mucho la ciencias (en especial la F&iacute;sica), los deportes como el futbol, natacion y atletismo; y los videojuegos",
+	"color": "Morado",
+	"libro": ["El Camino de los Reyes."],
+	"musica": ["Folk Celta."],
+	"video_juego": ["Final Fantasy", "Zelda", "Kirby","Dark Souls"],
+	"lenguajes": [ "C", "C++", "Python", "Java"],
+	"email": "ramachado40@gmail.com",
+	"ci": "27344078",
+	"genero":"masculino",
+	"fecha_nacimiento":"08/03/1999"
+}
