@@ -46,3 +46,21 @@ async function estructuraPerfil(){
     nombre.innerHTML = index.nombre;
 }
 estructuraPerfil();
+
+async function listarEstudiantes(){
+    const listado = await fetch("http://127.0.0.1:5500/reto5/datos/index.json");
+    const listson = await listado.json();
+    listson.forEach(element => {
+        var lis = document.createElement("li");
+        var ima = document.createElement("img");
+        var contenido = element.nombre;
+        var nombre = document.createTextNode(contenido)
+        var fuente = element.ci;
+        var nomfuente = element.imagen;
+        ima.setAttribute("src", "./reto5/"+nomfuente);
+        lis.appendChild(ima);
+        lis.appendChild(nombre);
+        document.getElementById("estudiantes").appendChild(lis);
+    });
+}
+listarEstudiantes();
