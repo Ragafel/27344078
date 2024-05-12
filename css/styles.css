@@ -73,11 +73,12 @@ nav{
     width: 100%;
 }
 .ulheader li{
-    flex-direction: column;
+    
     width: 33%;
     background-color: rgb(41, 200, 199);;
     border-right: solid 2px white;
     text-align: center;
+    justify-content: center;
 
 }
 footer{
@@ -95,8 +96,10 @@ footer{
 
 }
 li p{
-text-align: center;
+    justify-content: center;
+    text-align: center;
 }
+
 
 nav{
     width: 100%;

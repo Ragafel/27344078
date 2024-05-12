@@ -6,16 +6,18 @@
     <title>ATI[UCV] 2024-1</title>
     <link rel="shortcut icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="reto5/conf/configES.json">
+    <script src="js/index.js"></script>
 </head>
 <body class="index">
     <header>
         <nav>
             <ul class="ulheader">
-                <li><p>ATI<FONT size="1">[UCV]</FONT> 2024-1</p></li>
-                <li><p>Hola, Rafael Machado</p></li>
+                <li><p><span id="ATI"></span><FONT size="1"><span id="ucv"></span></FONT><span id="semestre"></span></p></li>
+                <li><p id="saludo"></p></li>
                 <li><p>
                     <form>
-                       <input type="text" value="Nombre..." />
+                       <input type="text" id="nombre" />
                        <button type="button">Buscar</button>
                     </form>
                 </p></li>
@@ -30,63 +32,63 @@
                     <source srcset="CEDULAPequeña.jpg" media="(min-width: 481px) and (max-width: 768px)" title="CEDULAPequeña">
                     <source srcset="CEDULAGrande.jpg" media="(min-width: 769px) and (max-width: 1024px)" title="CEDULAGrande">
                     <source srcset="CEDULAGrande.jpg" media="(min-width: 1025px) and (max-width: 1200px)" title="CEDULAGrande">
-                    <img src="CEDULAGrande.jpg" alt="imagen principal" title="CEDULAGrande"> <!-- imagen principal -->
+                    <img src="" alt="imagen principal" title="CEDULAGrande"> <!-- imagen principal -->
                 </picture>
-                <p>Rafael Machado</p>
+                <p></p>
 
             </li>
             <li class="Francisca">
-                <img src="dummy1/dummy.jpg">
-                <p>Francisca Rosales</p>
+                <img src="">
+                <p></p>
 
             </li>
             <li class="Andrea">
-                <img src="dummy2/dummy.jpg">
-                <p>Andrea Gonzales</p>
+                <img src="">
+                <p></p>
             </li>
             <li class="Yuritza">
-                <img src="dummy3/dummy.jpg">
-                <p>Yuritza Cañate</p>
+                <img src="">
+                <p></p>
             </li>
             <li class="Luis">
-                <img src="dummy4/dummy.jpg">
-                <p>Luis Valdez</p>
+                <img src="">
+                <p></p>
 
             </li>
             <li class="Andres">
-                <img src="dummy5/dummy.jpg">
-                <p>Andres Torres</p>
+                <img src="">
+                <p></p>
 
             </li>
             <li class="Wilmer">
-                <img src="dummy6/dummy.jpg">
-                <p>Wilmer Avendaño</p>
+                <img src="">
+                <p></p>
             </li>
             <li class="Aliarly">
                 <img src="dummy1/dummy.jpg">
-                <p>Aliarly Carrillo</p>
+                <p></p>
             </li>
             <li class="Yeira">
                 <img src="dummy2/dummy.jpg">
-                <p>Yeira Colmenarez</p>
+                <p></p>
 
             </li>
             <li class="Karissa">
                 <img src="dummy3/dummy.jpg">
-                <p>Karissa Becerra</p>
+                <p></p>
 
             </li>
             <li class="Maikel">
                 <img src="dummy4/dummy.jpg">
-                <p>Maikel Gonzales</p>
+                <p></p>
             </li>
             <li class="Lyan">
                 <img src="dummy5/dummy.jpg">
-                <p>Lyan Peñaloza</p>
+                <p></p>
             </li>
         </ul>
     </section>
-    <footer><p>Copyright © 2024 Escuela de computación -
-        ATI. Todos los derechos reservados</p></footer>
+    <footer><p id="pie"></p></footer>
+    <script defer onload="obtenerDatos()"></script>
 </body>
 </html>
