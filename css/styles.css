@@ -192,7 +192,7 @@ img{
     height: 190px;
   
 }
-@media (min-width: 320px) and (max-width: 480px) {
+/*@media (min-width: 320px) and (max-width: 480px) {
     .mifoto {
         background: url(../CEDULAPequeña.jpg);
     }
@@ -211,4 +211,4 @@ img{
     .mifoto{
         background: url(../CEDULAGrande.jpg);
     }
-}
+}*/

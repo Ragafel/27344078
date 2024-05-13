@@ -10,11 +10,11 @@
 </head>
 <body class="perfil">
     <picture>
-        <source srcset="CEDULAPequeña.jpg" media="(min-width: 320px) and (max-width: 480px)" title="CEDULAPequeña">
-        <source srcset="CEDULAPequeña.jpg" media="(min-width: 481px) and (max-width: 768px)" title="CEDULAPequeña">
-        <source srcset="CEDULAGrande.jpg" media="(min-width: 769px) and (max-width: 1024px)" title="CEDULAGrande">
-        <source srcset="CEDULAGrande.jpg" media="(min-width: 1025px) and (max-width: 1200px)" title="CEDULAGrande">
-        <img class="mifoto" src="" alt="imagen principal" title="CEDULAGrande"> <!-- imagen principal -->
+        <source srcset="" media="(min-width: 320px) and (max-width: 480px)" title="CEDULAPequeña">
+        <source srcset="" media="(min-width: 481px) and (max-width: 768px)" title="CEDULAPequeña">
+        <source srcset="" media="(min-width: 769px) and (max-width: 1024px)" title="CEDULAGrande">
+        <source srcset="" media="(min-width: 1025px) and (max-width: 1200px)" title="CEDULAGrande">
+        <img id="fotoPerfil" class="mifoto" alt="imagen principal" title="CEDULAGrande"> <!-- imagen principal -->
     </picture>
     <div class="midescripcion">
         <p id="nombre" class="nombre"></p>
@@ -22,29 +22,30 @@
     <table>
         <tr>
             <td id="color"></td>
-            <td></td>
+            <td id="colorr"></td>
         </tr>
         <tr>
             <td id="libro"></td>
-            <td ></td>
+            <td id="libror" ></td>
         </tr>
         <tr>
-            <td id="musica">/td>
-            <td></td>
+            <td id="musica"></td>
+            <td id="musicar"></td>
         </tr>
         <tr>
             <td id="videojuegos"></td>
-            <td></td>
+            <td id="videojuegosr"></td>
         </tr>
         <tr>
             <td id="lenguajes"></td>
-            <td><b></b></td>
+            <td id="lenguajesr"><b></b></td>
         </tr>
         <tr>
             <td id="mail"></td>
-            <td><a href="mailto:"></a></td>
+           
         </tr>
     </table>
     <script defer onload="estructuraPerfil()"></script>
+    <script defer onload="cargarPerfil()"></script>
 </body>
 </html>

@@ -64,3 +64,48 @@ async function listarEstudiantes(){
     });
 }
 listarEstudiantes();
+
+async function cargarPerfil(){
+    const listado = await fetch("http://127.0.0.1:5500/reto5/datos/index.json");
+    const listson = await listado.json();
+    const urlObject = new URL(location.href);
+    if(urlObject.searchParams.get("ci")){
+        var perfil = urlObject.searchParams.get("ci");
+        listson.forEach(element => {
+            if (element.ci == perfil){
+                fetch("http://127.0.0.1:5500/reto5/"+perfil+"/perfil.json")
+                    .then(function(res) {
+                        return res.json();
+                    })
+                    .then(function(data){
+                       let nombre = document.getElementById("nombre");
+                       nombre.innerHTML = data.nombre
+                       let descrip = document.getElementById("descripcion");
+                       descrip.innerHTML = data.descripcion;
+                       let color = document.getElementById("colorr");
+                       color.innerHTML = data.color;
+                       let lib = document.getElementById("libror");
+                       lib.innerHTML = data.libro;
+                       let music = document.getElementById("musicar");
+                       music.innerHTML = data.musica
+                       let vg = document.getElementById("videojuegosr");
+                       vg.innerHTML = data.video_juego;
+                       let lengua = document.getElementById("lenguajesr");
+                       lengua.innerHTML = "<strong>" + data.lenguajes + "</strong>";
+                       let mail = document.getElementById("mail");
+                       mail.innerHTML = mail.innerHTML.replace("[email]", "<a id='enlace'>"+data.email+"</a>");
+                       let enlace = document.getElementById("enlace");
+                       enlace.setAttribute("href", "mailto:"+data.email)
+                    })
+                let imagen = document.getElementById("fotoPerfil");
+                let src = element.imagen;
+                imagen.setAttribute("src", "./reto5/"+src);
+                }
+
+        }
+        )
+    }
+        
+    
+}
+cargarPerfil();
