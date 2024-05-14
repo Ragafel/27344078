@@ -16,15 +16,15 @@
                 <li><p><span id="ATI"></span><FONT size="1"><span id="ucv"></span></FONT><span id="semestre"></span></p></li>
                 <li><p id="saludo"></p></li>
                 <li><p>
-                    <form>
-                       <input type="text" id="nombre" />
-                       <button type="button">Buscar</button>
-                    </form>
+                    <div>
+                       <input type="text" id="nombre" onkeyup = "if(event.keyCode == 13) busqueda()"/>
+                       <button type="button" onclick="busqueda()" >Buscar</button>
+                    </div>
                 </p></li>
               </ul>
         </nav>
     </header>
-    <section>
+    <section id="existencia">
         <ul id="estudiantes" class="dummys">
         </ul>
     </section>

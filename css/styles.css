@@ -66,6 +66,10 @@ nav{
     height: 100px;
     vertical-align: middle;
 }
+#borrame{
+    display: flex;
+    justify-content: center;
+}
 .ulheader{
     text-align: center;
     display: flex;
@@ -93,6 +97,7 @@ footer{
     text-align: center;
     vertical-align: middle;
     clear: both;
+    position: fixed;
 
 }
 li p{
