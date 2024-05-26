@@ -1,7 +1,8 @@
 async function obtenerDatos(){
     const urlObject = new URL(location.href);
     var comprueba = urlObject.searchParams.get("L")
-    if( comprueba == "EN"){
+    var comprueba2 = urlObject.searchParams.get("l")
+    if( comprueba == "EN" || comprueba == "en" || comprueba2 == "EN" || comprueba2 == "en" ){
         const response = await fetch("http://127.0.0.1:5500/reto5/conf/configEN.json");
         const json = await response.json();
 
@@ -18,7 +19,7 @@ async function obtenerDatos(){
         let saludo = document.getElementById("saludo");
         saludo.innerHTML = json.saludo + ", Rafael";
 
-    }else if (comprueba == "PT"){
+    }else if (comprueba == "PT" || comprueba == "pt" || comprueba2 == "pt" || comprueba2 == "PT"){
         const response = await fetch("http://127.0.0.1:5500/reto5/conf/configPT.json");
         const json = await response.json();
 
@@ -62,7 +63,8 @@ obtenerDatos();
 async function estructuraPerfil(){
     const urlObject = new URL(location.href);
     var comprueba = urlObject.searchParams.get("L")
-    if( comprueba == "EN"){
+    var comprueba2 = urlObject.searchParams.get("l")
+    if( comprueba == "EN" || comprueba == "en" || comprueba2 == "EN" || comprueba2 == "en"){
     const respuesta = await fetch("http://127.0.0.1:5500/reto5/conf/configEN.json");
     const index = await respuesta.json();
 
@@ -83,7 +85,7 @@ async function estructuraPerfil(){
     let nombre = document.getElementById("nombre");
     nombre.innerHTML = index.nombre;
     
-    }else if( comprueba == "PT"){
+    }else if( comprueba == "PT" || comprueba == "pt" || comprueba2 == "pt" || comprueba2 == "PT"){
     const respuesta = await fetch("http://127.0.0.1:5500/reto5/conf/configPT.json");
     const index = await respuesta.json();
 
@@ -220,7 +222,7 @@ async function cargarPerfil(){
 cargarPerfil();
 
 function busqueda(){
-    var padre = document.getElementById("estudiantes");
+    var padre = document.getElementsByClassName("index")[0];
     if(document.getElementById("borrame")){
         var referencia = document.getElementById("borrame");
         padre.removeChild(referencia);

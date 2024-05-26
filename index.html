@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
     <link href="reto5/conf/configES.json">
-    <script src="js/index.js"></script>
+    <script defer type="text/javascript" src="js/index.js"></script>
 </head>
 <body class="index">
     <header>
@@ -17,8 +17,8 @@
                 <li><p id="saludo"></p></li>
                 <li><p>
                     <div>
-                       <input type="text" id="nombre" onkeyup = "if(event.keyCode == 13) busqueda()"/>
-                       <button type="button" onclick="busqueda()" >Buscar</button>
+                       <input type="text" id="nombre"  onkeyup = "if(event.keyCode == 13) busqueda()"/>
+                       <button type="button"  onclick="busqueda()" >Buscar</button>
                     </div>
                 </p></li>
               </ul>
@@ -29,7 +29,6 @@
         </ul>
     </section>
     <footer><p id="pie"></p></footer>
-    <script defer onload="obtenerDatos()"></script>
-    <script defer onload="listarEstudiantes()"></script>
+
 </body>
 </html>
