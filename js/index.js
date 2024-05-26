@@ -3,7 +3,7 @@ async function obtenerDatos(){
     var comprueba = urlObject.searchParams.get("L")
     var comprueba2 = urlObject.searchParams.get("l")
     if( comprueba == "EN" || comprueba == "en" || comprueba2 == "EN" || comprueba2 == "en" ){
-        const response = await fetch("http://127.0.0.1:5500/reto5/conf/configEN.json");
+        const response = await fetch("http://127.0.0.1:5500/reto5/conf/configEN.json",{mode: 'cors'});
         const json = await response.json();
 
         let ati = document.getElementById("ATI");
@@ -20,7 +20,7 @@ async function obtenerDatos(){
         saludo.innerHTML = json.saludo + ", Rafael";
 
     }else if (comprueba == "PT" || comprueba == "pt" || comprueba2 == "pt" || comprueba2 == "PT"){
-        const response = await fetch("http://127.0.0.1:5500/reto5/conf/configPT.json");
+        const response = await fetch("http://127.0.0.1:5500/reto5/conf/configPT.json",{mode: 'cors'});
         const json = await response.json();
 
         let ati = document.getElementById("ATI");
@@ -36,7 +36,7 @@ async function obtenerDatos(){
         let saludo = document.getElementById("saludo");
         saludo.innerHTML = json.saludo + ", Rafael";
     }else {
-        const response = await fetch("http://127.0.0.1:5500/reto5/conf/configES.json");
+        const response = await fetch("http://127.0.0.1:5500/reto5/conf/configES.json",{mode: 'cors'});
         const json = await response.json();
 
         let ati = document.getElementById("ATI");
@@ -65,7 +65,7 @@ async function estructuraPerfil(){
     var comprueba = urlObject.searchParams.get("L")
     var comprueba2 = urlObject.searchParams.get("l")
     if( comprueba == "EN" || comprueba == "en" || comprueba2 == "EN" || comprueba2 == "en"){
-    const respuesta = await fetch("http://127.0.0.1:5500/reto5/conf/configEN.json");
+    const respuesta = await fetch("http://127.0.0.1:5500/reto5/conf/configEN.json",{mode: 'cors'});
     const index = await respuesta.json();
 
     let mail = document.getElementById("mail");
@@ -86,7 +86,7 @@ async function estructuraPerfil(){
     nombre.innerHTML = index.nombre;
     
     }else if( comprueba == "PT" || comprueba == "pt" || comprueba2 == "pt" || comprueba2 == "PT"){
-    const respuesta = await fetch("http://127.0.0.1:5500/reto5/conf/configPT.json");
+    const respuesta = await fetch("http://127.0.0.1:5500/reto5/conf/configPT.json",{mode: 'cors'});
     const index = await respuesta.json();
 
     let mail = document.getElementById("mail");
@@ -106,7 +106,7 @@ async function estructuraPerfil(){
     let nombre = document.getElementById("nombre");
     nombre.innerHTML = index.nombre;
     }else{
-    const respuesta = await fetch("http://127.0.0.1:5500/reto5/conf/configES.json");
+    const respuesta = await fetch("http://127.0.0.1:5500/reto5/conf/configES.json",{mode: 'cors'});
     const index = await respuesta.json();
 
     let mail = document.getElementById("mail");
@@ -131,7 +131,7 @@ async function estructuraPerfil(){
 estructuraPerfil();
 
 async function listarEstudiantes(){
-    const listado = await fetch("http://127.0.0.1:5500/reto5/datos/index.json");
+    const listado = await fetch("http://127.0.0.1:5500/reto5/datos/index.json",{mode: 'cors'});
     const listson = await listado.json();
     listson.forEach(element => {
         var lis = document.createElement("li");
@@ -150,14 +150,14 @@ async function listarEstudiantes(){
 listarEstudiantes();
 
 async function cargarPerfil(){
-    const listado = await fetch("http://127.0.0.1:5500/reto5/datos/index.json");
+    const listado = await fetch("http://127.0.0.1:5500/reto5/datos/index.json",{mode: 'cors'});
     const listson = await listado.json();
     const urlObject = new URL(location.href);
     if(urlObject.searchParams.get("ci")){
         var perfil = urlObject.searchParams.get("ci");
         listson.forEach(element => {
             if (element.ci == perfil){
-                fetch("http://127.0.0.1:5500/reto5/"+perfil+"/perfil.json")
+                fetch("http://127.0.0.1:5500/reto5/"+perfil+"/perfil.json",{mode: 'cors'})
                     .then(function(res) {
                         return res.json();
                     })
@@ -192,7 +192,7 @@ async function cargarPerfil(){
         var perfil = urlObject.searchParams.get("CI");
         listson.forEach(element => {
             if (element.ci == perfil){
-                fetch("http://127.0.0.1:5500/reto5/"+perfil+"/perfil.json")
+                fetch("http://127.0.0.1:5500/reto5/"+perfil+"/perfil.json",{mode: 'cors'})
                     .then(function(res) {
                         return res.json();
                     })
@@ -223,9 +223,8 @@ async function cargarPerfil(){
 
         }
         )
-    }
-    else{
-        fetch("http://127.0.0.1:5500/reto5/27344078/perfil.json")
+    }else{
+        fetch("http://127.0.0.1:5500/reto5/27344078/perfil.json",{mode: 'cors'})
                     .then(function(res) {
                         return res.json();
                     })
@@ -292,7 +291,7 @@ function busqueda(){
         var contenido;
         var senal = document.createElement("h2");
         if( comprueba == "EN"){
-            fetch("http://127.0.0.1:5500/reto5/conf/configEN.json")
+            fetch("http://127.0.0.1:5500/reto5/conf/configEN.json",{mode: 'cors'})
                     .then(function(res) {
                         return res.json();
                     })
@@ -306,7 +305,7 @@ function busqueda(){
                        document.body.insertBefore(senal, document.getElementById("existencia"));
                     })
         } else if (comprueba == "PT"){
-            fetch("http://127.0.0.1:5500/reto5/conf/configPT.json")
+            fetch("http://127.0.0.1:5500/reto5/conf/configPT.json",{mode: 'cors'})
                     .then(function(res) {
                         return res.json();
                     })
@@ -320,7 +319,7 @@ function busqueda(){
                        document.body.insertBefore(senal, document.getElementById("existencia"));
                     })
         }else {
-            fetch("http://127.0.0.1:5500/reto5/conf/configES.json")
+            fetch("http://127.0.0.1:5500/reto5/conf/configES.json",{mode: 'cors'})
                     .then(function(res) {
                         return res.json();
                     })
