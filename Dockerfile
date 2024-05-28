@@ -1,6 +1,10 @@
 
 FROM ubuntu
-ADD https://github.com/Ragafel/27344078.git /home/27344078/
+copy ["index.html","perfil.html","/home/27344078/"] 
+copy css /home/27344078/css/
+copy docs /home/27344078/docs/
+copy js /home/27344078/js/
+copy reto5 /home/27344078/reto5/
 run apt-get update -y
 run apt-get upgrade -y
 run apt-get install nano -y
